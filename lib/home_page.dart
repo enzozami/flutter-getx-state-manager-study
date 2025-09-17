@@ -28,6 +28,10 @@ class HomePage extends StatelessWidget {
               onPressed: () => Get.toNamed('/tiposReativosGenericosNulos'),
               child: Text('Tipos Reativos Genericos Nulos'),
             ),
+            TextButton(
+              onPressed: () => Get.toNamed('/tiposObs'),
+              child: Text('Tipos Obs'),
+            ),
           ],
         ),
       ),
