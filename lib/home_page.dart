@@ -32,6 +32,10 @@ class HomePage extends StatelessWidget {
               onPressed: () => Get.toNamed('/tiposObs'),
               child: Text('Tipos Obs'),
             ),
+            TextButton(
+              onPressed: () => Get.toNamed('/atualizacao'),
+              child: Text('Atualização de Objetos'),
+            ),
           ],
         ),
       ),
