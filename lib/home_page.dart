@@ -40,6 +40,10 @@ class HomePage extends StatelessWidget {
               onPressed: () => Get.toNamed('/controllers'),
               child: Text('Controllers'),
             ),
+            TextButton(
+              onPressed: () => Get.toNamed('/getxWidget'),
+              child: Text('GetX Widget'),
+            ),
           ],
         ),
       ),
