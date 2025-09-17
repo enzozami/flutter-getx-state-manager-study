@@ -6,7 +6,8 @@ class Controller extends GetxController {
   final nome = 'Enzo'.obs;
 
   @override
-  void onInit() {
+  Future<void> onInit() async {
+    // await 2.seconds.delay();
     log('onInit');
     super.onInit();
   }
