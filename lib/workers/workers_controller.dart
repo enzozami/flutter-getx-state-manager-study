@@ -21,12 +21,23 @@ class WorkersController extends GetxController {
     // );
     // _workers.add(everWorker);
 
-    final onceWorker = once<String>(_nome, (nome) {
-      log('Executando o worker ever');
-      log(nome);
-    });
+    // final onceWorker = once<String>(_nome, (nome) {
+    //   log('Executando o worker ever');
+    //   log(nome);
+    // });
 
-    _workers.add(onceWorker);
+    // _workers.add(onceWorker);
+
+    final workerInterval = interval<String>(
+      _nome,
+      (nome) {
+        log(' ################################################################# Executando o worker ever');
+        log('################################################################# $nome');
+      },
+      time: Duration(seconds: 2),
+    );
+
+    _workers.add(workerInterval);
     super.onInit();
   }
 
