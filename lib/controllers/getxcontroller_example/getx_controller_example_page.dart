@@ -37,6 +37,14 @@ class _GetxControllerExamplePageState extends State<GetxControllerExamplePage> {
               onPressed: () => Get.find<Controller>().alterarNome(),
               child: Text('Alterar nome'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                // Só funciona para lazyPut
+                Get.reload<Controller>(force: true);
+                setState(() {});
+              },
+              child: Text('Recarregar controller'),
+            ),
           ],
         ),
       ),

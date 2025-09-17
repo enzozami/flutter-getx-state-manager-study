@@ -36,9 +36,9 @@ class MyApp extends StatelessWidget {
           children: [
             GetPage(
               name: '/getxController',
-              binding: BindingsBuilder.put(
-                () => Controller(),
-              ),
+              binding: BindingsBuilder(() {
+                Get.lazyPut(() => Controller());
+              }),
               page: () => GetxControllerExamplePage(),
             ),
           ],
