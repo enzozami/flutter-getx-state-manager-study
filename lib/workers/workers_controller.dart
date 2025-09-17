@@ -10,34 +10,34 @@ class WorkersController extends GetxController {
 
   @override
   void onInit() {
-    // final everWorker = ever(
-    //   _nome,
-    //   (nome) {
-    //     log('Executando o worker ever');
-    //     log(nome);
-    //   },
-    //   cancelOnError: true,
-    //   condition: () => _nome.value == 'Enzo',
-    // );
-    // _workers.add(everWorker);
+    final everWorker = ever(
+      _nome,
+      (nome) {
+        log('Executando o worker ever');
+        log(nome);
+      },
+      cancelOnError: true,
+      condition: () => _nome.value == 'Enzo',
+    );
+    _workers.add(everWorker);
 
-    // final onceWorker = once<String>(_nome, (nome) {
-    //   log('Executando o worker once');
-    //   log(nome);
-    // });
+    final onceWorker = once<String>(_nome, (nome) {
+      log('Executando o worker once');
+      log(nome);
+    });
 
-    // _workers.add(onceWorker);
+    _workers.add(onceWorker);
 
-    // final workerInterval = interval<String>(
-    //   _nome,
-    //   (nome) {
-    //     log(' ################################################################# Executando o worker interval');
-    //     log('################################################################# $nome');
-    //   },
-    //   time: Duration(seconds: 2),
-    // );
+    final workerInterval = interval<String>(
+      _nome,
+      (nome) {
+        log(' ################################################################# Executando o worker interval');
+        log('################################################################# $nome');
+      },
+      time: Duration(seconds: 2),
+    );
 
-    // _workers.add(workerInterval);
+    _workers.add(workerInterval);
 
     final workerDebounce = debounce<String>(_nome, (nome) {
       log(' ################################################################# Executando o worker debounce');
