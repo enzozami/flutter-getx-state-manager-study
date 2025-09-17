@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:get/utils.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -16,6 +15,10 @@ class HomePage extends StatelessWidget {
             TextButton(
               onPressed: () => Get.toNamed('/basico'),
               child: Text('Básico - Reatividade'),
+            ),
+            TextButton(
+              onPressed: () => Get.toNamed('/tiposReativos'),
+              child: Text('Tipos Reativos'),
             ),
           ],
         ),
