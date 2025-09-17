@@ -10,16 +10,23 @@ class WorkersController extends GetxController {
 
   @override
   void onInit() {
-    final everWorker = ever(
-      _nome,
-      (nome) {
-        log('Executando o worker ever');
-        log(nome);
-      },
-      cancelOnError: true,
-      condition: () => _nome.value == 'Enzo',
-    );
-    _workers.add(everWorker);
+    // final everWorker = ever(
+    //   _nome,
+    //   (nome) {
+    //     log('Executando o worker ever');
+    //     log(nome);
+    //   },
+    //   cancelOnError: true,
+    //   condition: () => _nome.value == 'Enzo',
+    // );
+    // _workers.add(everWorker);
+
+    final onceWorker = once<String>(_nome, (nome) {
+      log('Executando o worker ever');
+      log(nome);
+    });
+
+    _workers.add(onceWorker);
     super.onInit();
   }
 
