@@ -8,6 +8,7 @@ import 'package:get_state_manager/controllers/getxcontroller_example/controller.
 import 'package:get_state_manager/controllers/getxcontroller_example/getx_controller_example_page.dart';
 import 'package:get_state_manager/getx_widget/getx_widget/getx_widget_page.dart';
 import 'package:get_state_manager/home_page.dart';
+import 'package:get_state_manager/local_state_widget/local_state_widget_page.dart';
 import 'package:get_state_manager/tipos/tipos_obs_page.dart';
 import 'package:get_state_manager/tipos/tipos_reativos_genericos_nulos_page.dart';
 import 'package:get_state_manager/tipos/tipos_reativos_genericos_page.dart';
@@ -47,6 +48,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/getxWidget',
           page: () => GetxWidgetPage(),
+        ),
+        GetPage(
+          name: '/localStateWidget',
+          page: () => LocalStateWidgetPage(),
         ),
       ],
     );
