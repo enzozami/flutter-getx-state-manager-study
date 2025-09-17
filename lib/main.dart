@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/instance_manager.dart';
 import 'package:get/route_manager.dart';
 import 'package:get_state_manager/atualizacao/atualizacao_objetos_page.dart';
 import 'package:get_state_manager/basico/reatividade_page.dart';
+import 'package:get_state_manager/controllers/controllers_home_page.dart';
+import 'package:get_state_manager/controllers/getxcontroller_example/controller.dart';
+import 'package:get_state_manager/controllers/getxcontroller_example/getx_controller_example_page.dart';
 import 'package:get_state_manager/home_page.dart';
 import 'package:get_state_manager/tipos/tipos_obs_page.dart';
 import 'package:get_state_manager/tipos/tipos_reativos_genericos_nulos_page.dart';
@@ -26,6 +30,19 @@ class MyApp extends StatelessWidget {
             name: '/tiposReativosGenericosNulos', page: () => TiposReativosGenericosNulosPage()),
         GetPage(name: '/tiposObs', page: () => TiposObsPage()),
         GetPage(name: '/atualizacao', page: () => AtualizacaoObjetosPage()),
+        GetPage(
+          name: '/controllers',
+          page: () => ControllersHomePage(),
+          children: [
+            GetPage(
+              name: '/getxController',
+              binding: BindingsBuilder.put(
+                () => Controller(),
+              ),
+              page: () => GetxControllerExamplePage(),
+            ),
+          ],
+        ),
       ],
     );
   }
