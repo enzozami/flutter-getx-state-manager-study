@@ -52,6 +52,10 @@ class HomePage extends StatelessWidget {
               onPressed: () => Get.toNamed('/workers'),
               child: Text('Workers'),
             ),
+            TextButton(
+              onPressed: () => Get.toNamed('/firstRebuild'),
+              child: Text('First Rebuild'),
+            ),
           ],
         ),
       ),
