@@ -20,6 +20,12 @@ class ControllersHomePage extends StatelessWidget {
               },
               child: Text('GetXController'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed('/controllers/fullLifeCycle');
+              },
+              child: Text('Full Life Cycle'),
+            ),
           ],
         ),
       ),
